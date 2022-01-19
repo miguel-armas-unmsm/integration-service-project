@@ -1,13 +1,13 @@
 package com.unmsm.fisi.integrationservice.repository;
 
-import com.unmsm.fisi.integrationservice.model.entity.Document;
+import com.unmsm.fisi.integrationservice.model.entity.Student;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface DocumentRepository extends CrudRepository<Document, Long> {
+public interface StudentRepository extends CrudRepository<Student, Long> {
 
-  List<Document> findAll();
+  List<Student> findAll();
 }

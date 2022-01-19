@@ -1,18 +1,8 @@
-package com.unmsm.fisi.integrationservice.model.entity;
+package com.unmsm.fisi.photocopier.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import javax.persistence.*;
 
 @Builder
 @Setter
@@ -20,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "documents")
+@Table(name = "managed_documents")
 public class Document {
 
   @Id
@@ -30,6 +20,15 @@ public class Document {
 
   @Column(name = "title")
   private String title;
+
+  @Column(name = "file_name")
+  private String fileName;
+
+  @Column(name = "description")
+  private String description;
+
+  @Column(name = "pages")
+  private Long pages;
 
   @Lob
   @JsonIgnore

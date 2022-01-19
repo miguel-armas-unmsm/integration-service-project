@@ -11,9 +11,14 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DocumentDto {
+public class StudentDto {
 
   private Long id;
-  private byte[] file;
-  private String title;
+  private String code;
+  private String name;
+  private String incomeYear;
+  private String careerName;
+  private String facultyName;
+  private String universityName;
+  private String password;
 }

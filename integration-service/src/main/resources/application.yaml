@@ -6,18 +6,24 @@ spring:
     console:
       enabled: true
 
+#  datasource:
+#    url: jdbc:h2:mem:unmsmdatabase;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+#    driverClassName: org.h2.Driver
+#    platform: h2
+#    username: sa
+#    password:
+
   datasource:
-    url: jdbc:h2:mem:unmsmdatabase;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    platform: h2
-    username: sa
-    password:
+    url: jdbc:mysql://104.131.101.181:3306/dbIntegracion?autoReconnect=true&useSSL=false
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: tesis
+    password: Tesis123
 
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.H2Dialect
+#    database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
         show_sql: true

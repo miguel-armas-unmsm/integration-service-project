@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 import javax.validation.Valid;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/unmsm/esb/v1/students")

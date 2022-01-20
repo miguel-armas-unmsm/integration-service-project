@@ -13,4 +13,5 @@ public class UploadedDocumentDto {
   private byte[] file;
   private String fileName;
   private Long pages;
+  private String pagesPrint;
 }

@@ -25,6 +25,9 @@ public class UploadedDocument {
   @Column(name = "pages")
   private Long pages;
 
+  @Column(name = "pages_print")
+  private String pagesPrint;
+
   @Lob
   @JsonIgnore
   private byte[] file;

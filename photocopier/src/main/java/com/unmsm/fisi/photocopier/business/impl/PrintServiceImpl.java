@@ -31,13 +31,13 @@ public class PrintServiceImpl implements PrintService {
     PrintDto printDto = new PrintDto();
     Long id = 0L;
 
-    if(printRequest.getOrigin().equals("UPLOADED")) {
+    if(printRequest.getOrigin().equals("MANAGED")) {
       DocumentDto document = documentService.findManagedDocumentById(printRequest.getId());
       buildResponse.accept(printDto, document.getTitle());
       id = printRepository.save(printMapper.toEntity(printDto)).getId();
     }
 
-    if(printRequest.getOrigin().equals("MANAGED")) {
+    if(printRequest.getOrigin().equals("UPLOADED")) {
       UploadedDocumentDto document = documentService.findUploadedDocumentById(printRequest.getId());
       buildResponse.accept(printDto, document.getFileName());
       id = printRepository.save(printMapper.toEntity(printDto)).getId();

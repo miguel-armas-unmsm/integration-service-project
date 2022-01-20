@@ -21,4 +21,5 @@ public class StudentDto {
   private String facultyName;
   private String universityName;
   private String password;
+  private String email;
 }
